@@ -104,12 +104,12 @@ const data = [
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.*/
 
   ///MY CODE FOR STEP 1///
-  const articleInfo = document.querySelector("articles")
-data.forEach((arr)=>{
-  articles.appendhChild(createArticle(arr.title, arr.date));
-});
+  //const articleInfo = document.querySelector("articles")
+//data.forEach((arr)=>{
+ // articles.appendhChild(createArticle(arr.title, arr.date));
+//});
 
-function createArticle (title,date){
+
       //create elements//
 const article = document.createElement('div');
 const titleOfArticle = document.createElement('h2');
@@ -136,24 +136,20 @@ paragraph.classList.add('date');
 expandButton.classList.add('expandButton');
 
     //creating the text content//
-titleOfArticle.textContent = title;
-paragraph.textContent = date;
+
 
 
   //Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.//
 
   ///MY CODE FOR STEP 2///
 
-expandButton.eventListener('click',(event)=>{
-article.classList.toggle('article-open')
-})
 
   //Step 3: return the entire component.//
 
   ///MY CODE FOR STEP 3///
 
-return article;
-}
+//return article;
+
   //Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.//
 
 ///MY CODE FOR STEP 4///
