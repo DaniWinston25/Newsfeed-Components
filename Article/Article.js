@@ -104,6 +104,11 @@ const data = [
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.*/
 
   ///MY CODE FOR STEP 1///
+  const articleInfo = document.querySelector("articles")
+data.forEach((arr)=>{
+  articles.appendhChild(createArticle(arr.title, arr.date));
+});
+
 function createArticle (title,date){
       //create elements//
 const article = document.createElement('div');
@@ -113,8 +118,8 @@ const paragraph2 = document.createElement('p');
 const paragraph3 = document.createElement('p');
 const paragraph4 = document.createElement('p');
 const span = document.createElement('span');
-const buttonFunction = document.createElement('button')
-const buttonFunction2 = document.createElement('button')
+const buttonFunction = document.createElement('button');
+
 
     //append the children//
 article.appendChild(titleOfArticle);
@@ -124,7 +129,6 @@ article.appendChild(paragraph3);
 article.appendChild(paragraph4);
 article.appendChild(span);
 span.appendChild(buttonFunction);
-span.appendChild(buttonFunction2);
 
     //adding classList names//
 article.classList.add('article');
@@ -141,8 +145,8 @@ paragraph.textContent = date;
 
   ///MY CODE FOR STEP 2///
 
-expandButton.eventListener('click',(event)=>{
-
+buttonFunction.eventListener('click',(event)=>{
+buttonFunction.classList.toggle('article-open')
 })
 
   //Step 3: return the entire component.//
