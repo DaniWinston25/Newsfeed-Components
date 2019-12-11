@@ -101,14 +101,50 @@ const data = [
 
   Hint: You will need to use createElement more than once here!
 
-  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
+  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.*/
 
-  Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+  ///MY CODE FOR STEP 1///
 
-  Step 3: return the entire component.
+      //create elements//
+const article = document.createElement('div');
+const titleOfArticle = document.createElement('h2');
+const paragraph = document.createElement('p');
+const paragraph2 = document.createElement('p');
+const paragraph3 = document.createElement('p');
+const paragraph4 = document.createElement('p');
+const span = document.createElement('span');
 
-  Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+    //append the children//
+article.appendChild(titleOfArticle);
+article.appendChild(paragraph);
+article.appendChild(paragraph2);
+article.appendChild(paragraph3);
+article.appendChild(paragraph4);
+article.appendChild(span);
 
-  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+    //adding classList names//
+article.classList.add('article');
+paragraph.classList.add('date');
+span.classList.add('expandButton');
 
-*/
+  //Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.//
+
+  ///MY CODE FOR STEP 2///
+
+
+
+  //Step 3: return the entire component.//
+
+  ///MY CODE FOR STEP 3///
+
+
+
+  //Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.//
+
+///MY CODE FOR STEP 4///
+
+
+
+  //Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.//
+
+///MY CODE FOR STEP 5///
