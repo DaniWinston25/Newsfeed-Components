@@ -117,8 +117,8 @@ const paragraph = document.createElement('p');
 const paragraph2 = document.createElement('p');
 const paragraph3 = document.createElement('p');
 const paragraph4 = document.createElement('p');
-const span = document.createElement('span');
-const buttonFunction = document.createElement('button');
+const expandButton = document.createElement('span');
+
 
 
     //append the children//
@@ -127,14 +127,13 @@ article.appendChild(paragraph);
 article.appendChild(paragraph2);
 article.appendChild(paragraph3);
 article.appendChild(paragraph4);
-article.appendChild(span);
-span.appendChild(buttonFunction);
+article.appendChild(expandButton);
+
 
     //adding classList names//
 article.classList.add('article');
 paragraph.classList.add('date');
-span.classList.add('expandButton');
-buttonFunction.classList.add('article-open');
+expandButton.classList.add('expandButton');
 
     //creating the text content//
 titleOfArticle.textContent = title;
@@ -145,8 +144,8 @@ paragraph.textContent = date;
 
   ///MY CODE FOR STEP 2///
 
-buttonFunction.eventListener('click',(event)=>{
-buttonFunction.classList.toggle('article-open')
+expandButton.eventListener('click',(event)=>{
+article.classList.toggle('article-open')
 })
 
   //Step 3: return the entire component.//
