@@ -104,12 +104,10 @@ const data = [
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.*/
 
   ///MY CODE FOR STEP 1///
-  //const articleInfo = document.querySelector("articles")
-//data.forEach((arr)=>{
- // articles.appendhChild(createArticle(arr.title, arr.date));
-//});
 
+  const articleInfo = document.querySelector("articles")
 
+function articleCreator(title, date, p1, p2, p3){
       //create elements//
 const article = document.createElement('div');
 const titleOfArticle = document.createElement('h2');
@@ -119,8 +117,6 @@ const paragraph3 = document.createElement('p');
 const paragraph4 = document.createElement('p');
 const expandButton = document.createElement('span');
 
-
-
     //append the children//
 article.appendChild(titleOfArticle);
 article.appendChild(paragraph);
@@ -129,16 +125,21 @@ article.appendChild(paragraph3);
 article.appendChild(paragraph4);
 article.appendChild(expandButton);
 
-
     //adding classList names//
 article.classList.add('article');
 paragraph.classList.add('date');
 expandButton.classList.add('expandButton');
 
     //creating the text content//
+    titleOfArticle.textContent = title;
+    paragraph.textContent = date;
+    paragraph2.textContent = p1;
+    paragraph3.textContent = p2;
+    paragraph4.textContent = p3;
+    expandButton.textContent = 'Click to Expand';
 
-
-
+    
+  }
   //Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.//
 
   ///MY CODE FOR STEP 2///
@@ -154,7 +155,16 @@ expandButton.classList.add('expandButton');
 
 ///MY CODE FOR STEP 4///
 
-
+data.map((article) => {
+  let articleToAppend = articleCreator(
+      article.title,
+      article.date,
+      article.firstParagraph,
+      article.secondParagraph,
+      article.thirdParagraph,
+  );
+  return articles.appendChild(articleToAppend);
+});
 
   //Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.//
 
