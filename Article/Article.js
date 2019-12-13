@@ -105,7 +105,7 @@ const data = [
 
   ///MY CODE FOR STEP 1///
 
-  const articles = document.querySelector("articles")
+  const articles = document.querySelector(".articles")
 
 function articleCreator(title, date, p1, p2, p3){
       //create elements//
